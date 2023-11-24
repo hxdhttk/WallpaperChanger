@@ -13,7 +13,10 @@ var config = JsonSerializer.Deserialize(configFileContent, SourceGenerationConte
 ArgumentNullException.ThrowIfNull(config);
 ArgumentException.ThrowIfNullOrEmpty(config.ImageFolder);
 
-await StartChangeWallpaperAsync(config.ImageFolder, config.IntervalInSeconds);
+await StartChangeWallpaperAsync(
+    Environment.ExpandEnvironmentVariables(config.ImageFolder),
+    config.IntervalInSeconds
+);
 
 static unsafe void ChangeWallpaper(string imagePath)
 {

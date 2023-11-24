@@ -1,4 +1,4 @@
 {
-	"ImageFolder": "D:\\Pictures\\NetPics",
-	"IntervalInSeconds": 10
+	"ImageFolder": "%USERPROFILE%\\Pictures\\Wallpapers",
+	"IntervalInSeconds": 120
 }
