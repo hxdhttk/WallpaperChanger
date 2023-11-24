@@ -1,0 +1,3 @@
+﻿SystemParametersInfo
+GetDesktopWindow
+RedrawWindow
