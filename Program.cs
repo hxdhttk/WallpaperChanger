@@ -58,7 +58,7 @@ static async Task StartChangeWallpaperAsync(string imageFolder, int intervalInSe
     while (true)
     {
         var images = Directory.GetFiles(imageFolder);
-        images.OrderBy(_ => Random.Shared.Next());
+        images =  [.. images.OrderBy(_ => Random.Shared.Next())];
 
         foreach (var image in images)
         {
