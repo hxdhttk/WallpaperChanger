@@ -61,7 +61,7 @@ static async Task StartChangeWallpaperAsync(string imageFolder, int intervalInSe
     while (true)
     {
         var images = Directory.GetFiles(imageFolder);
-        images = [.. images.OrderBy(_ => Random.Shared.Next())];
+        images =  [.. images.OrderBy(_ => Random.Shared.Next())];
 
         foreach (var image in images)
         {
@@ -90,7 +90,8 @@ static async Task<string> TranscodeAsync(string image)
         return image;
     }
 
-    var transcodedImage = Path.GetFileName(image);
+    var appPathRoot = AppContext.BaseDirectory;
+    var transcodedImage = Path.Combine(appPathRoot, Path.GetFileName(image));
     if (File.Exists(transcodedImage))
     {
         return transcodedImage;
