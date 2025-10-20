@@ -1,3 +1,2 @@
-﻿SystemParametersInfo
-GetDesktopWindow
-RedrawWindow
+﻿IDesktopWallpaper
+DesktopWallpaper
