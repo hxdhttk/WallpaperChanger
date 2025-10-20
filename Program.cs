@@ -6,8 +6,6 @@ using SixLabors.ImageSharp.Processing;
 using Windows.Win32;
 using Windows.Win32.UI.Shell;
 
-ChangeWallpaper("");
-
 var configFileContent = File.ReadAllBytes("Config.json");
 var config = JsonSerializer.Deserialize(configFileContent, SourceGenerationContext.Default.Config);
 
